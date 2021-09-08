@@ -15,6 +15,7 @@
 		0474918226E4B36A00B3AF1E /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474918126E4B36A00B3AF1E /* ItemModel.swift */; };
 		0474918526E70B5200B3AF1E /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474918426E70B5200B3AF1E /* ListViewModel.swift */; };
 		0474918726E85C1F00B3AF1E /* NoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474918626E85C1F00B3AF1E /* NoItemView.swift */; };
+		0474918B26E8B36000B3AF1E /* LauchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0474918A26E8B36000B3AF1E /* LauchScreen.storyboard */; };
 		04E926A126E46817001C3A2E /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E926A026E46817001C3A2E /* AddView.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		0474918126E4B36A00B3AF1E /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		0474918426E70B5200B3AF1E /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		0474918626E85C1F00B3AF1E /* NoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoItemView.swift; sourceTree = "<group>"; };
+		0474918A26E8B36000B3AF1E /* LauchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LauchScreen.storyboard; sourceTree = "<group>"; };
 		04E926A026E46817001C3A2E /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 				040BFC7726E45A6700541EF6 /* ListRowView.swift */,
 				04E926A026E46817001C3A2E /* AddView.swift */,
 				0474918626E85C1F00B3AF1E /* NoItemView.swift */,
+				0474918A26E8B36000B3AF1E /* LauchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0474918B26E8B36000B3AF1E /* LauchScreen.storyboard in Resources */,
 				040BFC6D26E3B05E00541EF6 /* Preview Assets.xcassets in Resources */,
 				040BFC6A26E3B05E00541EF6 /* Assets.xcassets in Resources */,
 			);

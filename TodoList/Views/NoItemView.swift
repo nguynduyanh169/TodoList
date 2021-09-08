@@ -34,8 +34,9 @@ struct NoItemView: View {
             }.multilineTextAlignment(.center)
             .onAppear(perform: addAnimation)
             .padding(40)
+            .frame(maxWidth: 400)
             
-        }.navigationTitle("Title")
+        }
     }
     
     func addAnimation(){
