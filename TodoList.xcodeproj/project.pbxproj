@@ -14,6 +14,7 @@
 		040BFC7826E45A6700541EF6 /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BFC7726E45A6700541EF6 /* ListRowView.swift */; };
 		0474918226E4B36A00B3AF1E /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474918126E4B36A00B3AF1E /* ItemModel.swift */; };
 		0474918526E70B5200B3AF1E /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474918426E70B5200B3AF1E /* ListViewModel.swift */; };
+		0474918726E85C1F00B3AF1E /* NoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474918626E85C1F00B3AF1E /* NoItemView.swift */; };
 		04E926A126E46817001C3A2E /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E926A026E46817001C3A2E /* AddView.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		040BFC7726E45A6700541EF6 /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
 		0474918126E4B36A00B3AF1E /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		0474918426E70B5200B3AF1E /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		0474918626E85C1F00B3AF1E /* NoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoItemView.swift; sourceTree = "<group>"; };
 		04E926A026E46817001C3A2E /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 				040BFC7526E3B57C00541EF6 /* ListView.swift */,
 				040BFC7726E45A6700541EF6 /* ListRowView.swift */,
 				04E926A026E46817001C3A2E /* AddView.swift */,
+				0474918626E85C1F00B3AF1E /* NoItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0474918226E4B36A00B3AF1E /* ItemModel.swift in Sources */,
+				0474918726E85C1F00B3AF1E /* NoItemView.swift in Sources */,
 				04E926A126E46817001C3A2E /* AddView.swift in Sources */,
 				0474918526E70B5200B3AF1E /* ListViewModel.swift in Sources */,
 				040BFC6626E3B05A00541EF6 /* TodoListApp.swift in Sources */,
