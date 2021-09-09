@@ -16,6 +16,7 @@
 		0474918526E70B5200B3AF1E /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474918426E70B5200B3AF1E /* ListViewModel.swift */; };
 		0474918726E85C1F00B3AF1E /* NoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474918626E85C1F00B3AF1E /* NoItemView.swift */; };
 		0474918B26E8B36000B3AF1E /* LauchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0474918A26E8B36000B3AF1E /* LauchScreen.storyboard */; };
+		0474918F26E8F49400B3AF1E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474918E26E8F49400B3AF1E /* LoginView.swift */; };
 		04E926A126E46817001C3A2E /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E926A026E46817001C3A2E /* AddView.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		0474918426E70B5200B3AF1E /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		0474918626E85C1F00B3AF1E /* NoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoItemView.swift; sourceTree = "<group>"; };
 		0474918A26E8B36000B3AF1E /* LauchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LauchScreen.storyboard; sourceTree = "<group>"; };
+		0474918E26E8F49400B3AF1E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		04E926A026E46817001C3A2E /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 				04E926A026E46817001C3A2E /* AddView.swift */,
 				0474918626E85C1F00B3AF1E /* NoItemView.swift */,
 				0474918A26E8B36000B3AF1E /* LauchScreen.storyboard */,
+				0474918E26E8F49400B3AF1E /* LoginView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				0474918526E70B5200B3AF1E /* ListViewModel.swift in Sources */,
 				040BFC6626E3B05A00541EF6 /* TodoListApp.swift in Sources */,
 				040BFC7626E3B57C00541EF6 /* ListView.swift in Sources */,
+				0474918F26E8F49400B3AF1E /* LoginView.swift in Sources */,
 				040BFC7826E45A6700541EF6 /* ListRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
