@@ -10,6 +10,8 @@ import SwiftUI
 struct LoginView: View {
     @State var emailText: String = ""
     @State var passwordText: String = ""
+    
+    @EnvironmentObject var loginViewModel: LoginViewModel
     var body: some View {
         VStack(alignment: .leading){
             HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/) {
@@ -37,7 +39,9 @@ struct LoginView: View {
                     Text("Forgot Password?").font(.subheadline).foregroundColor(.blue)
                 }
                 Spacer().frame(maxHeight: 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                Button(action: {}, label: {
+                Button(action: {
+                    loginViewModel.signInWithEmailAndPass(email: emailText, pass: passwordText)
+                }, label: {
                     Text("Sign In").foregroundColor(.white).font(.headline).frame(height:50).frame(maxWidth: .infinity).background(Color.accentColor).cornerRadius(10)
                 })
                 Text("OR").font(.subheadline).foregroundColor(.gray).padding(.top, 5).padding(.bottom, 5)

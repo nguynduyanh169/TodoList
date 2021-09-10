@@ -6,16 +6,27 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct TodoListApp: App {
-    @StateObject var listViewModel: ListViewModel = ListViewModel()
+    @StateObject var loginViewModel: LoginViewModel = LoginViewModel()
+    
+    init() {
+        setupAuthentication()
+    }
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                LoginView()
+                MainView()
             }.navigationViewStyle(StackNavigationViewStyle())
-            .environmentObject(listViewModel)
+            .environmentObject(loginViewModel)
         }
+    }
+}
+
+extension TodoListApp{
+    private func setupAuthentication(){
+        FirebaseApp.configure()
     }
 }
