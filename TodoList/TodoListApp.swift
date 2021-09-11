@@ -7,10 +7,12 @@
 
 import SwiftUI
 import Firebase
+import GoogleSignIn
 
 @main
 struct TodoListApp: App {
     @StateObject var loginViewModel: LoginViewModel = LoginViewModel()
+    @StateObject var listViewModel: ListViewModel = ListViewModel()
     
     init() {
         setupAuthentication()
@@ -20,7 +22,7 @@ struct TodoListApp: App {
             NavigationView {
                 MainView()
             }.navigationViewStyle(StackNavigationViewStyle())
-            .environmentObject(loginViewModel)
+            .environmentObject(loginViewModel).environmentObject(listViewModel)
         }
     }
 }
@@ -28,5 +30,6 @@ struct TodoListApp: App {
 extension TodoListApp{
     private func setupAuthentication(){
         FirebaseApp.configure()
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
     }
 }

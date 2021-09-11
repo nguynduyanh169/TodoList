@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ListViewModel: ObservableObject {
+class ListViewModel:NSObject, ObservableObject {
     @Published var items: [ItemModel] = [] {
         didSet{
             saveItems()
@@ -16,7 +16,8 @@ class ListViewModel: ObservableObject {
     
     let itemsKey: String = "items_key"
     
-    init() {
+    override init() {
+        super.init()
         getItems()
     }
     

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ListView: View {
     @EnvironmentObject var listViewModel: ListViewModel
+    
     var body: some View {
         ZStack{
             if listViewModel.items.isEmpty {
@@ -27,7 +28,7 @@ struct ListView: View {
             }
         }
         .navigationTitle("Todo List")
-        .navigationBarItems(leading: EditButton(), trailing: NavigationLink("Add", destination: AddView()))
+        .navigationBarItems(leading: EditButton(), trailing: NavigationLink("Add", destination: AddView().environmentObject(listViewModel)))
     }
     
 }

@@ -40,9 +40,14 @@ struct LoginView: View {
                 }
                 Spacer().frame(maxHeight: 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 Button(action: {
-                    loginViewModel.signInWithEmailAndPass(email: emailText, pass: passwordText)
+                    loginViewModel.state == .signingIn ?  print("loading") : loginViewModel.signInWithEmailAndPass(email: emailText, pass: passwordText) 
                 }, label: {
-                    Text("Sign In").foregroundColor(.white).font(.headline).frame(height:50).frame(maxWidth: .infinity).background(Color.accentColor).cornerRadius(10)
+                    if loginViewModel.state == .signingIn {
+                        ProgressView().progressViewStyle(CircularProgressViewStyle()).foregroundColor(.white).font(.headline).frame(height:50).frame(maxWidth: .infinity).background(Color.accentColor).cornerRadius(10)
+                    }else{
+                        Text("Sign In").foregroundColor(.white).font(.headline).frame(height:50).frame(maxWidth: .infinity).background(Color.accentColor).cornerRadius(10)
+                    }
+                    
                 })
                 Text("OR").font(.subheadline).foregroundColor(.gray).padding(.top, 5).padding(.bottom, 5)
                 

@@ -9,11 +9,17 @@ import SwiftUI
 
 struct MainView: View {
     @EnvironmentObject var loginViewModel: LoginViewModel
-    @StateObject var listViewModel: ListViewModel = ListViewModel()
     var body: some View {
-        switch loginViewModel.state {
-        case .signedIn: ListView().environmentObject(listViewModel)
-        case .signedOut: LoginView()
+//        switch loginViewModel.state {
+//        case .signedIn: ListView().environmentObject(listViewModel)
+//        case .signedOut: LoginView()
+//        case .signingIn:
+//            LoginView()
+//        }
+        if(loginViewModel.state == .signedIn){
+            ListView()
+        }else{
+            LoginView()
         }
     }
 }

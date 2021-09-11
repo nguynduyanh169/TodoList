@@ -8,9 +8,11 @@
 import Foundation
 import Firebase
 import FirebaseAuth
+import GoogleSignIn
 class LoginViewModel: NSObject, ObservableObject {
     
     enum SignInState {
+        case signingIn
         case signedIn
         case signedOut
     }
@@ -18,7 +20,7 @@ class LoginViewModel: NSObject, ObservableObject {
     @Published var state: SignInState = .signedOut
     
     func signInWithEmailAndPass(email: String, pass: String){
-        print(email)
+        self.state = .signingIn
         let credentials = EmailAuthProvider.credential(withEmail: email, password: pass)
         Auth.auth().signIn(with: credentials){ (_, error) in
             if let error = error {
@@ -29,6 +31,13 @@ class LoginViewModel: NSObject, ObservableObject {
         }
     }
     
+    func signInGoogle(){
+        if GIDSignIn.sharedInstance().currentUser == nil {
+            GIDSignIn.sharedInstance().presentingViewController = UIApplication.shared.windows.first?.rootViewController
+            GIDSignIn.sharedInstance().signIn()
+        }
+    }
     
 }
+
 
