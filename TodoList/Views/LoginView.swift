@@ -53,7 +53,9 @@ struct LoginView: View {
                 
             }.padding(.horizontal, 10)
             VStack {
-                Button(action: {}, label: {
+                Button(action: {
+                    loginViewModel.state == .signingInGoogle ?  print("loading") : loginViewModel.signInGoogle() 
+                }, label: {
                     Image("search").resizable().frame(maxWidth: 20, maxHeight: 20)
                     Text("Continue with Google").foregroundColor(.gray).font(.headline)
                     
