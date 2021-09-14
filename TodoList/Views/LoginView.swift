@@ -63,7 +63,9 @@ struct LoginView: View {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.gray, lineWidth: 0.5)
                 )
-                Button(action: {}, label: {
+                Button(action: {
+                    loginViewModel.state == .sinningInFaceBook ?  print("loading") : loginViewModel.signInWithFacebook() 
+                }, label: {
                     Image("facebook").resizable().frame(maxWidth: 20, maxHeight: 20)
                     Text("Continue with Facebook").foregroundColor(.gray).font(.headline)
                     

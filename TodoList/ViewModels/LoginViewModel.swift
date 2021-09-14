@@ -9,11 +9,13 @@ import Foundation
 import Firebase
 import FirebaseAuth
 import GoogleSignIn
+import FBSDKLoginKit
 class LoginViewModel: NSObject, ObservableObject {
-    
+    private let premission = ["public_profile", "email"]
     enum SignInState {
         case signingIn
         case signingInGoogle
+        case sinningInFaceBook
         case signedIn
         case signedOut
     }
@@ -44,6 +46,29 @@ class LoginViewModel: NSObject, ObservableObject {
             GIDSignIn.sharedInstance().signIn()
         }
     }
+    
+    func signInWithFacebook(){
+        let fbLoginManager = LoginManager()
+        self.state = .sinningInFaceBook
+        fbLoginManager.logIn(permissions: premission, from: UIApplication.shared.windows.first?.rootViewController){ (result, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+            let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
+            
+            Auth.auth().signIn(with: credential, completion: {
+                (user, error) in
+                if let error = error{
+                    print(error.localizedDescription)
+                }else{
+                    self.state = .signedIn
+                }
+            })
+            
+        }
+    }
+    
+    
     
     private func setupGoogleSignIn(){
         GIDSignIn.sharedInstance().delegate = self
